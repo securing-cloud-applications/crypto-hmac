@@ -21,6 +21,7 @@
   </properties>
 
   <modules>
+    <module>util</module>
     <module>warehouse</module>
     <module>payments</module>
   </modules>

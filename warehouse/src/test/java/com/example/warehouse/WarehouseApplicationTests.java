@@ -23,7 +23,6 @@ class WarehouseApplicationTests {
             new Refund("5555555555554444", BigDecimal.valueOf(500)),
             new Refund("4012888888881881", BigDecimal.valueOf(250)));
 
-    refundGenerationService.generateReport(Path.of("../data/refunds.json"), refunds,
-        password);
+    refundGenerationService.generateReport(Path.of("../data/refunds.json"), refunds, password);
   }
 }

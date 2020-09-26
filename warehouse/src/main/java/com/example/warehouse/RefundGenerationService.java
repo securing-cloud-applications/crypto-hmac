@@ -18,7 +18,7 @@ public class RefundGenerationService {
 
   public void generateReport(Path refundsFile, List<Refund> refunds, String password) {
     this.generateRefundFile(refundsFile, refunds);
-    this.generateSha256HmacFile(refundsFile,password);
+    this.generateSha256HmacFile(refundsFile, password);
   }
 
   private void generateRefundFile(Path refundsFile, List<Refund> refunds) {
@@ -33,7 +33,7 @@ public class RefundGenerationService {
 
   private void generateSha256HmacFile(Path refundsFile, String password) {
     try {
-      var hashValue = computeHmac(refundsFile,password);
+      var hashValue = computeHmac(refundsFile, password);
       var hashFile = refundsFile.resolveSibling(refundsFile.getFileName() + ".hs256");
       Files.writeString(hashFile, hashValue);
     } catch (IOException e) {

@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.security.InvalidKeyException;
-import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
@@ -14,8 +13,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class PaymentService {
 
-  public void processRefunds(Path refundsFile,String password) {
-    if (!isValid(refundsFile,password)) {
+  public void processRefunds(Path refundsFile, String password) {
+    if (!isValid(refundsFile, password)) {
       throw new CorruptRefundFileException();
     }
     try {
@@ -26,13 +25,13 @@ public class PaymentService {
     }
   }
 
-  private boolean isValid(Path refundsFile,String password) {
-    var actualHash = computeHmac(refundsFile,password);
+  private boolean isValid(Path refundsFile, String password) {
+    var actualHash = computeHmac(refundsFile, password);
     var exceptedHash = readExpectedHash(refundsFile);
     return actualHash.equals(exceptedHash);
   }
 
-  private String computeHmac(Path refundsFile,String password) {
+  private String computeHmac(Path refundsFile, String password) {
     try {
       Mac hmac = Mac.getInstance("HmacSHA256");
       hmac.init(new SecretKeySpec(password.getBytes(), "HmacSHA256"));

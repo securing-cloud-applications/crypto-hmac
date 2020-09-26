@@ -9,21 +9,12 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.example</groupId>
-  <artifactId>payments</artifactId>
+  <artifactId>util</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>payments</name>
-  <description>Payments application</description>
+  <name>util</name>
+  <description>shared utility classes</description>
 
   <dependencies>
-    <dependency>
-      <groupId>com.example</groupId>
-      <artifactId>util</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter</artifactId>
-    </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-security</artifactId>
@@ -33,14 +24,4 @@
       <artifactId>spring-boot-starter-json</artifactId>
     </dependency>
   </dependencies>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </build>
-
 </project>

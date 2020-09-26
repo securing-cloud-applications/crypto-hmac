@@ -16,7 +16,7 @@ class PaymentsApplicationTests {
 
   @Test
   void testRefundProcessing() {
-    System.out.println("'"+password+"'");
-    paymentService.processRefunds(Path.of("../data/refunds.json"),password);
+    System.out.println("'" + password + "'");
+    paymentService.processRefunds(Path.of("../data/refunds.json"), password);
   }
 }
