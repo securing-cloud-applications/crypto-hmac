@@ -1,7 +1,7 @@
 # crypto-hmac
 
 Demo project showing how to use HMAC functions with SHA-256 to guarantee data integrity 
-and authenticate who generates a file. There are two sub projects in this repo.
+and authenticate who generates a file. There are three subprojects in this repo.
 
 * utils - contains shared utility classes `CrptoUtils` and `JsonUtils`.  
 * warehouse - generates `data/refunds.json` file, depends on the utils project. 
