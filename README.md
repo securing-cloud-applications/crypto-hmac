@@ -1,4 +1,4 @@
-# crypto-hash
+# crypto-hmac
 
 Demo project showing how to use HMAC functions with SHA-256 to guarantee data integrity 
 and authenticate who generates a file. There are two sub projects in this repo.
