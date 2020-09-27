@@ -29,7 +29,7 @@ on utils project.
 * edit `data/refunds.json` to simulate corruption. you can add a newline at the end of the file.
 * run `com.example.payments.PaymentsApplication` to get a data corruption exception 
 * restore `data/refunds.json` to its original state
-* edit the refunds key in `src/main/resources/application.yml`
+* edit the refunds key in `payments/src/main/resources/application.yml`
 * run `com.example.payments.PaymentsApplication` to get a data corruption exception 
 
 ## interesting files to look at 
