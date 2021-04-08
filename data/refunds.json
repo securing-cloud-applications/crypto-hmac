@@ -1,7 +1,7 @@
 [ {
-  "creditCard" : "5555555555554444",
+  "orderId" : "12345",
   "amount" : 500
 }, {
-  "creditCard" : "4012888888881881",
+  "orderId" : "56789",
   "amount" : 250
 } ]
