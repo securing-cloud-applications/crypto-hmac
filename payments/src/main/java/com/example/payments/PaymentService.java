@@ -12,13 +12,13 @@ public class PaymentService {
   public void processRefunds(Path refundsFile, String key) {
     try {
       byte[] refunds = Files.readAllBytes(refundsFile);
-      String actualHash = CryptoUtils.hmacSha256(refunds, key);
+      String actualHmac = CryptoUtils.hmacSha256(refunds, key);
 
-      String hashFileName = refundsFile.getFileName() + ".hs256";
-      Path hashFile = refundsFile.resolveSibling(hashFileName);
-      String exceptedHash = Files.readString(hashFile);
+      String hmacFileName = refundsFile.getFileName() + ".hs256";
+      Path hashFile = refundsFile.resolveSibling(hmacFileName);
+      String exceptedHmac = Files.readString(hashFile);
 
-      if (!actualHash.equals(exceptedHash)) {
+      if (!actualHmac.equals(exceptedHmac)) {
         throw new CorruptRefundFileException();
       }
 

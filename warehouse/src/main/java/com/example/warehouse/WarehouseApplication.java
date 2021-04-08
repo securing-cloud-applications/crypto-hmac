@@ -24,8 +24,8 @@ public class WarehouseApplication implements CommandLineRunner {
   public void run(String... args) throws Exception {
     var refunds =
         List.of(
-            new Refund("5555555555554444", BigDecimal.valueOf(500)),
-            new Refund("4012888888881881", BigDecimal.valueOf(250)));
+            new Refund("12345", BigDecimal.valueOf(500)),
+            new Refund("56789", BigDecimal.valueOf(250)));
 
     refundGenerationService.generateReport(Path.of(refundsPath), refunds, key);
   }
